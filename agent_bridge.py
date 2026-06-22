@@ -220,3 +220,40 @@ def agent_search_memory(name, query, n=5):
     project_dir = os.path.join(PROJECTS_DIR, name)
     sm = StoryMemory(project_dir)
     return sm.search_all(query, n)
+
+import datetime
+
+RESEARCH_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "research")
+
+def agent_save_research(topic, content, source=""):
+    """保存共享调研结果到 research/ 目录（不进入 git）"""
+    os.makedirs(RESEARCH_DIR, exist_ok=True)
+    date_str = datetime.datetime.now().strftime("%Y%m%d")
+    safe_topic = topic.replace(" ", "_").replace("/", "_")[:30]
+    filename = f"{date_str}_{safe_topic}.md"
+    filepath = os.path.join(RESEARCH_DIR, filename)
+    
+    header = f"# {topic}\n"
+    if source:
+        header += f"来源：{source}\n"
+    header += f"日期：{datetime.datetime.now().strftime('%Y-%m-%d %H:%M')}\n\n"
+    
+    with open(filepath, "w", encoding="utf-8") as f:
+        f.write(header + content)
+    
+    return {"message": f"调研结果已保存: {filename}", "path": filepath}
+
+def agent_list_research():
+    """列出所有调研记录"""
+    if not os.path.exists(RESEARCH_DIR):
+        return []
+    files = sorted(os.listdir(RESEARCH_DIR))
+    result = []
+    for fname in files:
+        if fname.endswith(".md") and fname != "README.md":
+            fpath = os.path.join(RESEARCH_DIR, fname)
+            with open(fpath, encoding="utf-8") as f:
+                first_line = f.readline().strip().lstrip("# ")
+            size = os.path.getsize(fpath)
+            result.append({"file": fname, "title": first_line, "size": size})
+    return result

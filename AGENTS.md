@@ -59,3 +59,13 @@ caf-writing/projects/{作品名}/
 1. `agent_open_project("relic-expedition")`
 2. 加载上下文，回顾当前进度
 3. 询问用户接下来要写什么
+
+
+## 调研工作流
+
+1. 先调用 `agent_list_research()` 检查 research/ 目录有无相关积累
+2. 如有，直接引用；如无，开展新调研
+3. 调研完成后调用 `agent_save_research(topic, content, source)` 保存
+4. 调研结果跨项目共享，避免重复劳动
+
+> research/ 和 projects/ 均不被 git 跟踪
