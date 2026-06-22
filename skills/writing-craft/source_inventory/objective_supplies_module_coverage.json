@@ -1,0 +1,178 @@
+[
+  {
+    "file_name": "Characters and Viewpoint (Elements of Fiction Writing).txt",
+    "slug": "characters-and-viewpoint",
+    "status": "extracted",
+    "module": "characters-viewpoint-card",
+    "extracted_chars": 245673,
+    "note": ""
+  },
+  {
+    "file_name": "Creating Character Arcs (K. M. Weiland) (z-library.sk, 1lib.sk, z-lib.sk).epub",
+    "slug": "creating-character-arcs",
+    "status": "extracted",
+    "module": "character-arcs-weiland",
+    "extracted_chars": 302163,
+    "note": ""
+  },
+  {
+    "file_name": "Plot and Structure (James Scott Bell) (z-library.sk, 1lib.sk, z-lib.sk).epub",
+    "slug": "plot-and-structure",
+    "status": "extracted",
+    "module": "plot-structure-bell",
+    "extracted_chars": 422125,
+    "note": ""
+  },
+  {
+    "file_name": "Reading Like a Writer (P_S_) -- Prose, Francine.epub",
+    "slug": "reading-like-a-writer-prose-francine",
+    "status": "extracted",
+    "module": "reading-like-a-writer-prose",
+    "extracted_chars": 490513,
+    "note": ""
+  },
+  {
+    "file_name": "Screenplay the foundations of screenwriting (Field, Syd) (z-library.sk, 1lib.sk, z-lib.sk).epub",
+    "slug": "screenplay-the-foundations-of-screenwriting",
+    "status": "extracted",
+    "module": "screenplay",
+    "extracted_chars": 656378,
+    "note": ""
+  },
+  {
+    "file_name": "Self-Editing for Fiction Writers -- Renni Browne.epub",
+    "slug": "self-editing-for-fiction-writers-renni-browne",
+    "status": "extracted",
+    "module": "self-editing-fiction-writers",
+    "extracted_chars": 330069,
+    "note": ""
+  },
+  {
+    "file_name": "Several Short Sentences About Writing -- Verlyn Klinkenborg.epub",
+    "slug": "several-short-sentences-about-writing-verlyn-klinkenborg",
+    "status": "extracted",
+    "module": "short-sentences-klinkenborg",
+    "extracted_chars": 205655,
+    "note": ""
+  },
+  {
+    "file_name": "Steering the Craft (Chinese Edition) -- Ursula K_ Le Guin -- 1, 2018 -- Jiangxi People's Publishing House.epub",
+    "slug": "steering-the-craft-ursula-k-le-guin-1-2018-jiangxi-people-s-publishing-house",
+    "status": "extracted",
+    "module": "steering-the-craft-leguin",
+    "extracted_chars": 123324,
+    "note": ""
+  },
+  {
+    "file_name": "Story Engineering.mobi",
+    "slug": "story-engineering",
+    "status": "extracted",
+    "module": "story-engineering-brooks",
+    "extracted_chars": 175803,
+    "note": ""
+  },
+  {
+    "file_name": "Story Substance, Structure, Style and the Principles of Screenwriting (Robert McKee) (z-library.sk, 1lib.sk, z-lib.sk).epub",
+    "slug": "story-substance-structure-style-and-the-principles-of-screenwriting",
+    "status": "extracted",
+    "module": "story-mckee",
+    "extracted_chars": 817011,
+    "note": ""
+  },
+  {
+    "file_name": "Structuring Your Novel Essential Keys for Writing an Outstanding Story (Helping Writers Become Authors 3) (K. M. Weiland) (z-library.sk, 1lib.sk, z-lib.sk).epub",
+    "slug": "structuring-your-novel-essential-keys-for-writing-an-outstanding-story",
+    "status": "extracted",
+    "module": "structuring-your-novel-weiland",
+    "extracted_chars": 355244,
+    "note": ""
+  },
+  {
+    "file_name": "Techniques of the Selling Writer (Dwight V. Swain) (z-library.sk, 1lib.sk, z-lib.sk).epub",
+    "slug": "techniques-of-the-selling-writer",
+    "status": "extracted",
+    "module": "scene-mechanics-swain",
+    "extracted_chars": 601163,
+    "note": ""
+  },
+  {
+    "file_name": "The 38 Most Common Fiction Writing Mistakes (and How to Avoid Them) (Jack M. Bickham) (z-library.sk, 1lib.sk, z-lib.sk).epub",
+    "slug": "the-38-most-common-fiction-writing-mistakes",
+    "status": "extracted",
+    "module": "fiction-mistakes-bickham",
+    "extracted_chars": 239585,
+    "note": ""
+  },
+  {
+    "file_name": "The Anatomy of Story (John Truby) (z-library.sk, 1lib.sk, z-lib.sk).epub",
+    "slug": "the-anatomy-of-story",
+    "status": "extracted",
+    "module": "anatomy-of-story-truby",
+    "extracted_chars": 816730,
+    "note": ""
+  },
+  {
+    "file_name": "The Elements of Fiction Writing - Scene  Structure (Bickham Jack) (z-library.sk, 1lib.sk, z-lib.sk).epub",
+    "slug": "the-elements-of-fiction-writing-scene-structure",
+    "status": "extracted",
+    "module": "scene-structure-bickham",
+    "extracted_chars": 426554,
+    "note": ""
+  },
+  {
+    "file_name": "Wired for Story.epub",
+    "slug": "wired-for-story",
+    "status": "extracted",
+    "module": "wired-for-story-cron",
+    "extracted_chars": 454752,
+    "note": ""
+  },
+  {
+    "file_name": "Write Great Fiction--Characters, Emotion & Viewpoint.epub",
+    "slug": "write-great-fiction-characters-emotion-viewpoint",
+    "status": "extracted",
+    "module": "characters-emotion-viewpoint-kress",
+    "extracted_chars": 484295,
+    "note": ""
+  },
+  {
+    "file_name": "写作这回事 _ 创作生涯回忆录 = On writing Xie zuo zhei hui shi _ Chuang -- 斯蒂芬·金.epub",
+    "slug": "写作这回事-创作生涯回忆录-on-writing-xie-zuo-zhei-hui-shi-chuang-斯蒂芬-金",
+    "status": "extracted",
+    "module": "on-writing-king",
+    "extracted_chars": 161356,
+    "note": ""
+  },
+  {
+    "file_name": "冲突与悬念_小说创作的要素.epub",
+    "slug": "冲突与悬念-小说创作的要素",
+    "status": "extracted",
+    "module": "conflict-suspense",
+    "extracted_chars": 189064,
+    "note": ""
+  },
+  {
+    "file_name": "對白的解剖：跟好萊塢編劇教父學習角色說話的藝術，在已說、未說、不可說之間，強化故事的深度、角色的厚度、風格的魅力 = Dialogue The Art of Verbal... (z-library.sk, 1lib.sk, z-lib.sk).epub",
+    "slug": "對白的解剖-跟好萊塢編劇教父學習角色說話的藝術-在已說-未說-不可說之間-強化故事的深度-角色的厚度-風格的魅力-dialogue-the-art-of-verbal",
+    "status": "extracted",
+    "module": "dialogue",
+    "extracted_chars": 212591,
+    "note": ""
+  },
+  {
+    "file_name": "小说创作二十讲.pdf",
+    "slug": "小说创作二十讲",
+    "status": "old_baseline_pdf_needs_ocr",
+    "module": "novel-writing-20-lectures",
+    "extracted_chars": 0,
+    "note": "PDF text layer unavailable; old baseline module already exists at textbooks/novel-writing-20-lectures; OCR optional later."
+  },
+  {
+    "file_name": "救猫咪-小说创作指南.epub",
+    "slug": "救猫咪-小说创作指南",
+    "status": "extracted",
+    "module": "save-the-cat-novel",
+    "extracted_chars": 221656,
+    "note": ""
+  }
+]

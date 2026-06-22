@@ -1,0 +1,28 @@
+# Query Map
+
+- If `角色开口、内心独白、第一人称叙述或旁白正在承载场景推进时。`, query `对白等于行动`; apply gate: line_action_verb_gate
+- If `出现连续对话或角色解释自身想法时。`, query `台词的目的性`; apply gate: speaker_want_gate
+- If `对白涉及秘密、伤痛、礼仪、政治、悼念、神圣物、羞耻或禁忌时。`, query `Said / Unsaid / Unsayable 三层`; apply gate: subtext_three_layer_gate
+- If `对白字面含义过直、人物把心里话完整说出、读者无需推断时。`, query `潜文本驱动表层语言`; apply gate: subtext_inference_gate
+- If `需要交代世界观、制度、历史、人物背景或规则时。`, query `解说只在需要时给`; apply gate: exposition_timing_gate
+- If `人物准备长篇解释设定、历史、主题或作者观点时。`, query `解说要嵌入行动而非讲座`; apply gate: exposition_as_action_gate
+- If `出现一个角色提问、另一个角色完整准确回答设定或剧情答案的 Q&A 段落。`, query `反信息问答硬失败`; apply gate: no_qa_infodump_gate
+- If `不同人物说话听起来像同一作者腔，或只靠口头禅区分时。`, query `角色专属声音来自词汇而非口癖`; apply gate: character_voice_distinction_gate
+- If `临时 NPC 说话超过功能性一句，或承担信息、手续、冲突、情绪反馈。`, query `NPC 最小声音卡`; apply gate: npc_voice_card_gate
+- If `关键对话场景开始前，人物目标相撞但台词形态未定时。`, query `冲突类型先于台词设计`; apply gate: conflict_type_selection_gate
+- If `双方资源、地位、信息或情感筹码接近，争执需要互有来回。`, query `平衡式冲突`; apply gate: balanced_conflict_gate
+- If `日常、少年少女互动、公会轻场景或误会场景需要轻喜剧张力时。`, query `喜趣式冲突`; apply gate: comic_conflict_ethics_gate
+- If `新人面对接待员、老手、贵族、公务体系、审查者或任何权力不对等关系。`, query `非对称冲突`; apply gate: asymmetric_power_gate
+- If `暗线反派、政治试探、不能公开摊牌、双方都在装作谈别的事情。`, query `间接冲突`; apply gate: indirect_conflict_subtext_gate
+- If `角色独处、内心独白、第一人称自述、遗物碎片触发或自我说服时。`, query `反身式冲突`; apply gate: reflexive_inner_conflict_gate
+- If `神圣仪式、悼念场合、羞耻、亲密沉默或不能明说的关系裂缝。`, query `极简/含蓄冲突`; apply gate: minimal_conflict_restraint_gate
+- If `英灵遗物、归航仪式、死亡、悼念、祖先、牺牲或神圣职业被提及时。`, query `神圣/悼念对象的不可说层`; apply gate: sacred_unsayable_gate
+- If `一段对话结束后，场景状态看似与开始相同。`, query `对白结束必须有转变`; apply gate: dialogue_turn_result_gate
+- If `对白模拟真实闲聊、寒暄、重复确认或无压力聊天。`, query `删陈腔滥调和日常絮叨`; apply gate: no_chatter_cliche_gate
+- If `小说段落混合第三人称旁白、第一人称回忆、内心独白和直接对白时。`, query `叙述嗓音与角色嗓音分离`; apply gate: narrator_character_voice_gate
+- If `第一人称主述、回忆讲述、旁白直接对读者说明自身经历。`, query `叙述对白也要有策略`; apply gate: narratized_dialogue_strategy_gate
+- If `章节或场景前需要安排读者知道什么、不知道什么。`, query `延迟信息清单`; apply gate: information_delay_gate
+- If `写关键场景、争执、审问、委托、仪式、揭露或告别前。`, query `对话图先于正文`; apply gate: dialogue_map_required_gate
+- If `对白看起来不自然、冷、机器人或说明味重，需要修稿时。`, query `修订优先级：先戏后句`; apply gate: dialogue_revision_order_gate
+- If `世界观制度、组织流程、登记、审查、训练、禁忌规则需要出现。`, query `手续化信息揭露`; apply gate: procedural_exposition_gate
+- If `多人对白、NPC 对白或旁白连续出现同样冷淡、抽象、理性化句式。`, query `反作者腔门禁`; apply gate: anti_author_voice_gate

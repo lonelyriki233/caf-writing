@@ -1,0 +1,24 @@
+# Objective Supplies Module Coverage
+
+- extracted | characters-viewpoint-card | `Characters and Viewpoint (Elements of Fiction Writing).txt` | chars 245673
+- extracted | character-arcs-weiland | `Creating Character Arcs (K. M. Weiland) (z-library.sk, 1lib.sk, z-lib.sk).epub` | chars 302163
+- extracted | plot-structure-bell | `Plot and Structure (James Scott Bell) (z-library.sk, 1lib.sk, z-lib.sk).epub` | chars 422125
+- extracted | reading-like-a-writer-prose | `Reading Like a Writer (P_S_) -- Prose, Francine.epub` | chars 490513
+- extracted | screenplay | `Screenplay the foundations of screenwriting (Field, Syd) (z-library.sk, 1lib.sk, z-lib.sk).epub` | chars 656378
+- extracted | self-editing-fiction-writers | `Self-Editing for Fiction Writers -- Renni Browne.epub` | chars 330069
+- extracted | short-sentences-klinkenborg | `Several Short Sentences About Writing -- Verlyn Klinkenborg.epub` | chars 205655
+- extracted | steering-the-craft-leguin | `Steering the Craft (Chinese Edition) -- Ursula K_ Le Guin -- 1, 2018 -- Jiangxi People's Publishing House.epub` | chars 123324
+- extracted | story-engineering-brooks | `Story Engineering.mobi` | chars 175803
+- extracted | story-mckee | `Story Substance, Structure, Style and the Principles of Screenwriting (Robert McKee) (z-library.sk, 1lib.sk, z-lib.sk).epub` | chars 817011
+- extracted | structuring-your-novel-weiland | `Structuring Your Novel Essential Keys for Writing an Outstanding Story (Helping Writers Become Authors 3) (K. M. Weiland) (z-library.sk, 1lib.sk, z-lib.sk).epub` | chars 355244
+- extracted | scene-mechanics-swain | `Techniques of the Selling Writer (Dwight V. Swain) (z-library.sk, 1lib.sk, z-lib.sk).epub` | chars 601163
+- extracted | fiction-mistakes-bickham | `The 38 Most Common Fiction Writing Mistakes (and How to Avoid Them) (Jack M. Bickham) (z-library.sk, 1lib.sk, z-lib.sk).epub` | chars 239585
+- extracted | anatomy-of-story-truby | `The Anatomy of Story (John Truby) (z-library.sk, 1lib.sk, z-lib.sk).epub` | chars 816730
+- extracted | scene-structure-bickham | `The Elements of Fiction Writing - Scene  Structure (Bickham Jack) (z-library.sk, 1lib.sk, z-lib.sk).epub` | chars 426554
+- extracted | wired-for-story-cron | `Wired for Story.epub` | chars 454752
+- extracted | characters-emotion-viewpoint-kress | `Write Great Fiction--Characters, Emotion & Viewpoint.epub` | chars 484295
+- extracted | on-writing-king | `写作这回事 _ 创作生涯回忆录 = On writing Xie zuo zhei hui shi _ Chuang -- 斯蒂芬·金.epub` | chars 161356
+- extracted | conflict-suspense | `冲突与悬念_小说创作的要素.epub` | chars 189064
+- extracted | dialogue | `對白的解剖：跟好萊塢編劇教父學習角色說話的藝術，在已說、未說、不可說之間，強化故事的深度、角色的厚度、風格的魅力 = Dialogue The Art of Verbal... (z-library.sk, 1lib.sk, z-lib.sk).epub` | chars 212591
+- old_baseline_pdf_needs_ocr | novel-writing-20-lectures | `小说创作二十讲.pdf` | chars 0 | PDF text layer unavailable; old baseline module already exists at textbooks/novel-writing-20-lectures; OCR optional later.
+- extracted | save-the-cat-novel | `救猫咪-小说创作指南.epub` | chars 221656

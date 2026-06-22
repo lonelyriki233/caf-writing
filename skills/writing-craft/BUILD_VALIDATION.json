@@ -1,0 +1,147 @@
+{
+  "built_at": "2026-04-30T18:06:34.208525",
+  "status": "objective_supplies P0 full-pass knowledge base built",
+  "objective_supplies_total_files": 22,
+  "objective_supplies_unmapped": [],
+  "objective_supplies_not_accounted": [],
+  "textbook_module_count": 22,
+  "structured_textbook_concepts": 212,
+  "textbook_modules": [
+    {
+      "module": "anatomy-of-story-truby",
+      "concept_count": 8,
+      "missing": [],
+      "empty": []
+    },
+    {
+      "module": "character-arcs-weiland",
+      "concept_count": 8,
+      "missing": [],
+      "empty": []
+    },
+    {
+      "module": "characters-emotion-viewpoint-kress",
+      "concept_count": 8,
+      "missing": [],
+      "empty": []
+    },
+    {
+      "module": "characters-viewpoint-card",
+      "concept_count": 8,
+      "missing": [],
+      "empty": []
+    },
+    {
+      "module": "conflict-suspense",
+      "concept_count": 12,
+      "missing": [],
+      "empty": []
+    },
+    {
+      "module": "dialogue",
+      "concept_count": 26,
+      "missing": [],
+      "empty": []
+    },
+    {
+      "module": "fiction-mistakes-bickham",
+      "concept_count": 8,
+      "missing": [],
+      "empty": []
+    },
+    {
+      "module": "novel-writing-20-lectures",
+      "concept_count": 8,
+      "missing": [],
+      "empty": []
+    },
+    {
+      "module": "on-writing-king",
+      "concept_count": 8,
+      "missing": [],
+      "empty": []
+    },
+    {
+      "module": "plot-structure-bell",
+      "concept_count": 8,
+      "missing": [],
+      "empty": []
+    },
+    {
+      "module": "reading-like-a-writer-prose",
+      "concept_count": 8,
+      "missing": [],
+      "empty": []
+    },
+    {
+      "module": "save-the-cat-novel",
+      "concept_count": 12,
+      "missing": [],
+      "empty": []
+    },
+    {
+      "module": "scene-mechanics-swain",
+      "concept_count": 8,
+      "missing": [],
+      "empty": []
+    },
+    {
+      "module": "scene-structure-bickham",
+      "concept_count": 8,
+      "missing": [],
+      "empty": []
+    },
+    {
+      "module": "screenplay",
+      "concept_count": 18,
+      "missing": [],
+      "empty": []
+    },
+    {
+      "module": "self-editing-fiction-writers",
+      "concept_count": 8,
+      "missing": [],
+      "empty": []
+    },
+    {
+      "module": "short-sentences-klinkenborg",
+      "concept_count": 8,
+      "missing": [],
+      "empty": []
+    },
+    {
+      "module": "steering-the-craft-leguin",
+      "concept_count": 8,
+      "missing": [],
+      "empty": []
+    },
+    {
+      "module": "story-engineering-brooks",
+      "concept_count": 8,
+      "missing": [],
+      "empty": []
+    },
+    {
+      "module": "story-mckee",
+      "concept_count": 8,
+      "missing": [],
+      "empty": []
+    },
+    {
+      "module": "structuring-your-novel-weiland",
+      "concept_count": 8,
+      "missing": [],
+      "empty": []
+    },
+    {
+      "module": "wired-for-story-cron",
+      "concept_count": 8,
+      "missing": [],
+      "empty": []
+    }
+  ],
+  "json_errors": [],
+  "missing": [],
+  "empty": [],
+  "known_remaining_gap": "old 小说创作二十讲 PDF still has no text layer; existing baseline module retained, OCR optional later. Next major work: convert local reference corpus into full case database and pattern families."
+}

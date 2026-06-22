@@ -1,0 +1,24 @@
+# Objective Supplies Manifest
+
+- extracted | .txt | 245673 chars | `Characters and Viewpoint (Elements of Fiction Writing).txt` | slug `characters-and-viewpoint`
+- extracted | .epub | 302163 chars | `Creating Character Arcs (K. M. Weiland) (z-library.sk, 1lib.sk, z-lib.sk).epub` | slug `creating-character-arcs`
+- extracted | .epub | 422125 chars | `Plot and Structure (James Scott Bell) (z-library.sk, 1lib.sk, z-lib.sk).epub` | slug `plot-and-structure`
+- extracted | .epub | 490513 chars | `Reading Like a Writer (P_S_) -- Prose, Francine.epub` | slug `reading-like-a-writer-prose-francine`
+- extracted | .epub | 656378 chars | `Screenplay the foundations of screenwriting (Field, Syd) (z-library.sk, 1lib.sk, z-lib.sk).epub` | slug `screenplay-the-foundations-of-screenwriting`
+- extracted | .epub | 330069 chars | `Self-Editing for Fiction Writers -- Renni Browne.epub` | slug `self-editing-for-fiction-writers-renni-browne`
+- extracted | .epub | 205655 chars | `Several Short Sentences About Writing -- Verlyn Klinkenborg.epub` | slug `several-short-sentences-about-writing-verlyn-klinkenborg`
+- extracted | .epub | 123324 chars | `Steering the Craft (Chinese Edition) -- Ursula K_ Le Guin -- 1, 2018 -- Jiangxi People's Publishing House.epub` | slug `steering-the-craft-ursula-k-le-guin-1-2018-jiangxi-people-s-publishing-house`
+- extracted | .mobi | 175803 chars | `Story Engineering.mobi` | slug `story-engineering`
+- extracted | .epub | 817011 chars | `Story Substance, Structure, Style and the Principles of Screenwriting (Robert McKee) (z-library.sk, 1lib.sk, z-lib.sk).epub` | slug `story-substance-structure-style-and-the-principles-of-screenwriting`
+- extracted | .epub | 355244 chars | `Structuring Your Novel Essential Keys for Writing an Outstanding Story (Helping Writers Become Authors 3) (K. M. Weiland) (z-library.sk, 1lib.sk, z-lib.sk).epub` | slug `structuring-your-novel-essential-keys-for-writing-an-outstanding-story`
+- extracted | .epub | 601163 chars | `Techniques of the Selling Writer (Dwight V. Swain) (z-library.sk, 1lib.sk, z-lib.sk).epub` | slug `techniques-of-the-selling-writer`
+- extracted | .epub | 239585 chars | `The 38 Most Common Fiction Writing Mistakes (and How to Avoid Them) (Jack M. Bickham) (z-library.sk, 1lib.sk, z-lib.sk).epub` | slug `the-38-most-common-fiction-writing-mistakes`
+- extracted | .epub | 816730 chars | `The Anatomy of Story (John Truby) (z-library.sk, 1lib.sk, z-lib.sk).epub` | slug `the-anatomy-of-story`
+- extracted | .epub | 426554 chars | `The Elements of Fiction Writing - Scene  Structure (Bickham Jack) (z-library.sk, 1lib.sk, z-lib.sk).epub` | slug `the-elements-of-fiction-writing-scene-structure`
+- extracted | .epub | 454752 chars | `Wired for Story.epub` | slug `wired-for-story`
+- extracted | .epub | 484295 chars | `Write Great Fiction--Characters, Emotion & Viewpoint.epub` | slug `write-great-fiction-characters-emotion-viewpoint`
+- extracted | .epub | 161356 chars | `写作这回事 _ 创作生涯回忆录 = On writing Xie zuo zhei hui shi _ Chuang -- 斯蒂芬·金.epub` | slug `写作这回事-创作生涯回忆录-on-writing-xie-zuo-zhei-hui-shi-chuang-斯蒂芬-金`
+- extracted | .epub | 189064 chars | `冲突与悬念_小说创作的要素.epub` | slug `冲突与悬念-小说创作的要素`
+- extracted | .epub | 212591 chars | `對白的解剖：跟好萊塢編劇教父學習角色說話的藝術，在已說、未說、不可說之間，強化故事的深度、角色的厚度、風格的魅力 = Dialogue The Art of Verbal... (z-library.sk, 1lib.sk, z-lib.sk).epub` | slug `對白的解剖-跟好萊塢編劇教父學習角色說話的藝術-在已說-未說-不可說之間-強化故事的深度-角色的厚度-風格的魅力-dialogue-the-art-of-verbal`
+- old_baseline_pdf_needs_ocr | .pdf | 0 chars | `小说创作二十讲.pdf` | slug `小说创作二十讲` | error: PDF text layer unavailable; old baseline module already exists at textbooks/novel-writing-20-lectures; OCR optional later.
+- extracted | .epub | 221656 chars | `救猫咪-小说创作指南.epub` | slug `救猫咪-小说创作指南`
