@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>CAF Writing — 作品列表</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: system-ui, sans-serif; background: #0d1117; color: #c9d1d9; padding: 30px; }
+h1 { color: #58a6ff; font-size: 24px; margin-bottom: 6px; }
+.subtitle { color: #8b949e; font-size: 14px; margin-bottom: 24px; }
+.actions { margin-bottom: 20px; }
+.actions button, .actions a {
+  display: inline-block; padding: 8px 16px; background: #238636; color: #fff;
+  border: none; border-radius: 6px; font-size: 14px; cursor: pointer; text-decoration: none;
+}
+.actions button:hover, .actions a:hover { background: #2ea043; }
+.project-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; }
+.card {
+  background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 18px;
+  transition: border-color 0.2s;
+}
+.card:hover { border-color: #58a6ff; }
+.card h3 { color: #58a6ff; font-size: 18px; margin-bottom: 6px; }
+.card h3 a { color: #58a6ff; text-decoration: none; }
+.card .meta { font-size: 13px; color: #8b949e; margin-bottom: 8px; }
+.card .logline { font-size: 14px; color: #d2d8e0; margin-bottom: 10px; }
+.card .stats { display: flex; gap: 16px; font-size: 13px; color: #8b949e; }
+.card .stats span { display: flex; align-items: center; gap: 4px; }
+.card .status { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 12px; }
+.status-active { background: #1b4b1b; color: #7ee787; }
+.status-paused { background: #4b341b; color: #f0c966; }
+
+/* Modal */
+.modal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.6); align-items: center; justify-content: center; }
+.modal.open { display: flex; }
+.modal-content { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 24px; width: 480px; max-width: 90vw; }
+.modal-content h2 { color: #58a6ff; margin-bottom: 16px; }
+.modal-content input, .modal-content textarea {
+  width: 100%; padding: 8px 12px; margin-bottom: 12px; background: #0d1117;
+  border: 1px solid #30363d; border-radius: 6px; color: #c9d1d9; font-size: 14px;
+}
+.modal-content textarea { min-height: 80px; resize: vertical; }
+.modal-content button { padding: 8px 20px; background: #238636; color: #fff; border: none; border-radius: 6px; font-size: 14px; cursor: pointer; }
+.modal-content .close { float: right; color: #8b949e; cursor: pointer; font-size: 24px; }
+.empty { text-align: center; padding: 60px; color: #8b949e; font-size: 16px; }
+</style>
+</head>
+<body>
+<h1>📖 CAF Writing</h1>
+<p class="subtitle">AI 共创小说框架 — 项目管理</p>
+
+<div class="actions">
+  <button onclick="openModal()">＋ 新建作品</button>
+</div>
+
+{% if projects %}
+<div class="project-grid">
+{% for p in projects %}
+  <div class="card">
+    <h3><a href="/project/{{ p.name }}">{{ p.title }}</a></h3>
+    <div class="meta">
+      {% if p.genre %}{{ p.genre }} · {% endif %}
+      {{ p.created[:10] }}
+      <span class="status status-{{ p.status }}">{{ p.status }}</span>
+    </div>
+    <div class="logline">{{ p.logline or '暂无简介' }}</div>
+    <div class="stats">
+      <span>📝 {{ p.word_count or 0 }} 字</span>
+      <span>📂 {{ p.chapter_count or 0 }} 章</span>
+      <span>👤 {{ p.character_count or 0 }} 人物</span>
+      <span>📊 {{ p.progress }}%</span>
+    </div>
+  </div>
+{% endfor %}
+</div>
+{% else %}
+<div class="empty">
+  <p style="font-size: 48px; margin-bottom: 16px;">📚</p>
+  <p>还没有作品。创建一个新项目开始写作吧。</p>
+</div>
+{% endif %}
+
+<!-- Modal -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h2>新建作品</h2>
+    <input id="name" placeholder="项目 ID（英文/数字，如 my-novel）" />
+    <input id="title" placeholder="作品标题（如：遗物远征）" />
+    <input id="genre" placeholder="类型（如：奇幻、科幻、悬疑）" />
+    <textarea id="logline" placeholder="一句话故事简介（logline）"></textarea>
+    <button onclick="createProject()">创建</button>
+  </div>
+</div>
+
+<script>
+function openModal() { document.getElementById('modal').classList.add('open'); }
+function closeModal() { document.getElementById('modal').classList.remove('open'); }
+document.getElementById('modal').addEventListener('click', function(e) {
+  if (e.target === this) closeModal();
+});
+
+async function createProject() {
+  const name = document.getElementById('name').value.trim();
+  if (!name) { alert('请输入项目 ID'); return; }
+  const res = await fetch('/api/projects', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({
+      name, title: document.getElementById('title').value.trim(),
+      genre: document.getElementById('genre').value.trim(),
+      logline: document.getElementById('logline').value.trim(),
+    })
+  });
+  if (res.ok) { location.reload(); }
+  else { alert((await res.json()).error); }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>{{ meta.title }} — CAF Writing</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: system-ui, sans-serif; background: #0d1117; color: #c9d1d9; padding: 30px; }
+.header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
+.header h1 { color: #58a6ff; font-size: 26px; }
+.header a { color: #8b949e; text-decoration: none; font-size: 14px; }
+.header a:hover { color: #58a6ff; }
+.meta-bar { display: flex; gap: 20px; font-size: 14px; color: #8b949e; margin-bottom: 24px; flex-wrap: wrap; }
+.meta-bar span { display: flex; align-items: center; gap: 4px; }
+.status { padding: 2px 8px; border-radius: 12px; font-size: 12px; }
+.status-active { background: #1b4b1b; color: #7ee787; }
+
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px; }
+.card {
+  background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 16px;
+}
+.card-full { grid-column: 1 / -1; }
+.card h2 { color: #58a6ff; font-size: 16px; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid #21262d; }
+.card .content { font-size: 14px; line-height: 1.7; white-space: pre-wrap; color: #d2d8e0; max-height: 400px; overflow-y: auto; }
+.card .empty-text { color: #8b949e; font-style: italic; }
+
+/* Character tag */
+.char-tag { display: inline-block; padding: 4px 10px; margin: 3px; border-radius: 16px; font-size: 13px; border: 1px solid #30363d; }
+.char-tag:hover { border-color: #58a6ff; }
+
+/* Plot events */
+.event { padding: 10px 0; border-bottom: 1px solid #21262d; }
+.event:last-child { border-bottom: none; }
+.event .chapter { color: #d29922; font-size: 12px; }
+.event .title { color: #58a6ff; font-size: 14px; }
+.event .desc { color: #8b949e; font-size: 13px; margin-top: 4px; }
+
+/* Sections */
+.section-nav { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+.section-nav button {
+  padding: 6px 14px; background: #21262d; border: 1px solid #30363d; color: #c9d1d9;
+  border-radius: 6px; cursor: pointer; font-size: 13px;
+}
+.section-nav button.active { background: #1f6feb; border-color: #1f6feb; color: #fff; }
+.section-nav button:hover { border-color: #58a6ff; }
+.section { display: none; }
+.section.active { display: block; }
+
+/* Decision analysis */
+.decision { background: #0d1117; border: 1px solid #30363d; border-radius: 6px; padding: 12px; margin: 8px 0; }
+.decision .context { color: #d2d8e0; }
+.decision .choice { color: #7ee787; }
+
+@media (max-width: 768px) {
+  .grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <div>
+    <h1>📖 {{ meta.title }}</h1>
+    <a href="/">← 返回作品列表</a>
+  </div>
+  <div>
+    <span class="status status-{{ meta.status }}">{{ meta.status }}</span>
+  </div>
+</div>
+
+<div class="meta-bar">
+  <span>🏷️ {{ meta.genre or '未分类' }}</span>
+  <span>📝 {{ meta.word_count or 0 }} 字</span>
+  <span>📂 {{ meta.chapter_count or 0 }} 章</span>
+  <span>👤 {{ summary.characters or 0 }} 人物</span>
+  <span>📈 {{ meta.progress }}%</span>
+  <span>📅 {{ meta.created[:10] }}</span>
+  {% if meta.logline %}<span>📋 {{ meta.logline[:60] }}{% if meta.logline|length > 60 %}...{% endif %}</span>{% endif %}
+</div>
+
+<div class="section-nav">
+  <button class="active" onclick="switchSection(event, 'overview')">概览</button>
+  <button onclick="switchSection(event, 'world')">世界观</button>
+  <button onclick="switchSection(event, 'characters')">人物</button>
+  <button onclick="switchSection(event, 'plot')">剧情</button>
+  <button onclick="switchSection(event, 'timeline')">时间线</button>
+  <button onclick="switchSection(event, 'decisions')">决策分析</button>
+</div>
+
+<!-- 概览 -->
+<div id="section-overview" class="section active">
+  <div class="grid">
+    <div class="card card-full">
+      <h2>📋 作品简介</h2>
+      <div class="content">{{ meta.logline or '暂未编写简介' }}</div>
+    </div>
+    <div class="card">
+      <h2>🗺️ 世界观</h2>
+      <div class="content">{{ context.world or '暂无设定' }}</div>
+    </div>
+    <div class="card">
+      <h2>👥 人物</h2>
+      <div class="content">{{ context.characters or '暂无人物' }}</div>
+    </div>
+    <div class="card card-full">
+      <h2>📊 数据</h2>
+      <div class="content" style="font-size: 13px;">
+        写作会话: {{ summary.work_sessions }} 次<br>
+        决策记录: {{ summary.total_decisions }} 条<br>
+        剧情事件: {{ summary.plot_events }} 个
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 世界观 -->
+<div id="section-world" class="section">
+  <div class="card card-full">
+    <h2>🗺️ 世界观设定</h2>
+    <div class="content">{{ context.world or '暂无世界观设定' }}</div>
+  </div>
+</div>
+
+<!-- 人物 -->
+<div id="section-characters" class="section">
+  <div class="card card-full">
+    <h2>👥 人物档案</h2>
+    <div class="content">{{ context.characters or '暂无人物档案' }}</div>
+  </div>
+</div>
+
+<!-- 剧情 -->
+<div id="section-plot" class="section">
+  <div class="card card-full">
+    <h2>📜 剧情脉络</h2>
+    <div class="content">{{ context.plot or '暂无剧情规划' }}</div>
+  </div>
+  {% if events %}
+  <div class="card card-full" style="margin-top: 16px;">
+    <h2>📊 剧情事件记录</h2>
+    {% for e in events %}
+    <div class="event">
+      <span class="chapter">第{{ e.chapter }}章</span>
+      <div class="title">{{ e.title }}</div>
+      <div class="desc">{{ e.description }}</div>
+      {% if e.characters %}<div style="margin-top: 4px; font-size: 12px; color: #8b949e;">人物: {{ e.characters|join(', ') }}</div>{% endif %}
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+</div>
+
+<!-- 时间线 -->
+<div id="section-timeline" class="section">
+  <div class="card card-full">
+    <h2>⏱️ 故事时间线</h2>
+    <div class="content">{{ context.timeline or '暂无时间线' }}</div>
+  </div>
+</div>
+
+<!-- 决策分析 -->
+<div id="section-decisions" class="section">
+  <div class="card card-full">
+    <h2>🎯 人物决策分析</h2>
+    <p style="color: #8b949e; margin-bottom: 16px; font-size: 14px;">预测人物在关键时刻的选择和反应，分析其行为模式。</p>
+    <div class="empty-text">在写作过程中，Agent 会自动记录人物决策并建立心理模型。</div>
+  </div>
+</div>
+
+<script>
+function switchSection(event, id) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.section-nav button').forEach(b => b.classList.remove('active'));
+  document.getElementById('section-' + id).classList.add('active');
+  event.target.classList.add('active');
+}
+</script>
+</body>
+</html>
